@@ -61,13 +61,44 @@
 
 // sayName.call(user);
 
-const btn = document.querySelector(".button");
+// const btn = document.querySelector(".button");
 
-btn.addEventListener("click", (e) => {
-  console.log(e.target);
-});
+// btn.addEventListener("click", (e) => {
+//   console.log(e.target);
+// });
 
-const double = (a) => {
-  return a * 2;
-};
-console.log(double(4));
+// const double = (a) => {
+//   return a * 2;
+// };
+// console.log(double(4));
+
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+
+  calcArea() {
+    return this.height * this.width;
+  }
+}
+
+class ColoredRectanleWithText extends Rectangle {
+  constructor(height, width, text, bgColor) {
+    super(height, width);
+    this.text = text;
+    this.bgColor = bgColor;
+  }
+
+  showMyProps() {
+    console.log(this.bgColor, this.height, this.width, this.text);
+  }
+}
+
+const square = new Rectangle(10, 10);
+const long = new Rectangle(20, 100);
+const newSquare = new ColoredRectanleWithText();
+
+console.log(square.calcArea());
+console.log(long.calcArea());
+console.log(newSquare.showMyProps());
