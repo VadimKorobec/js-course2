@@ -122,3 +122,22 @@
 // };
 
 // showTag();
+
+const person = {
+  name: "Gogo",
+  tel: "+30866666",
+  parents: {
+    father: "Give",
+    mother: "Dzule",
+  },
+  showParent() {
+    console.log(this.parents.father);
+  },
+};
+
+const clone = JSON.parse(JSON.stringify(person));
+
+clone.parents.father = "Gubaba";
+
+console.log(person);
+console.log(clone);
