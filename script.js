@@ -1,5 +1,3 @@
-"use strict";
-
 // function User(name, id) {
 //   this.name = name;
 //   this.id = id;
@@ -72,33 +70,55 @@
 // };
 // console.log(double(4));
 
-class Rectangle {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
-  }
+// class Rectangle {
+//   constructor(height, width) {
+//     this.height = height;
+//     this.width = width;
+//   }
 
-  calcArea() {
-    return this.height * this.width;
-  }
-}
+//   calcArea() {
+//     return this.height * this.width;
+//   }
+// }
 
-class ColoredRectanleWithText extends Rectangle {
-  constructor(height, width, text, bgColor) {
-    super(height, width);
-    this.text = text;
-    this.bgColor = bgColor;
-  }
+// class ColoredRectanleWithText extends Rectangle {
+//   constructor(height, width, text, bgColor) {
+//     super(height, width);
+//     this.text = text;
+//     this.bgColor = bgColor;
+//   }
 
-  showMyProps() {
-    console.log(this.bgColor, this.height, this.width, this.text);
-  }
-}
+//   showMyProps() {
+//     console.log(this.bgColor, this.height, this.width, this.text);
+//   }
+// }
 
-const square = new Rectangle(10, 10);
-const long = new Rectangle(20, 100);
-const newSquare = new ColoredRectanleWithText();
+// const square = new Rectangle(10, 10);
+// const long = new Rectangle(20, 100);
+// const newSquare = new ColoredRectanleWithText();
 
-console.log(square.calcArea());
-console.log(long.calcArea());
-console.log(newSquare.showMyProps());
+// console.log(square.calcArea());
+// console.log(long.calcArea());
+// console.log(newSquare.showMyProps());
+
+// const user = {
+//   tag: "Mango",
+//   showTag() {
+//     console.log("showTag -> this", this);
+//   },
+// };
+
+// user.showTag();
+
+// const foo = function () {
+//   console.log("foo -> this", this);
+// };
+
+// foo();
+
+// const showTag = function () {
+//   console.log("showTag -> this", this);
+//   console.log("showTag -> this.tag", this.tag);
+// };
+
+// showTag();
