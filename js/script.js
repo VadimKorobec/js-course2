@@ -176,9 +176,21 @@ const funds = [
 ];
 
 const getPositiveIncomeAmount = (data) => {
-  const total = data.map((item) => item[1] >= 0);
+  const total = data
+    .filter((item) => item.amount >= 0)
+    .reduce((acc, item) => {
+      return acc + item.amount;
+    }, 0);
 
-  console.log(total);
+  return total;
 };
 
 console.log(getPositiveIncomeAmount(funds));
+
+const getTotalIncomeAmount = (data) => {
+  return data.some((item) => item.amount < 0)
+    ? data.reduce((acc, curr) => acc + curr.amount, 0)
+    : getPositiveIncomeAmount(data);
+};
+
+console.log(getTotalIncomeAmount(funds));
